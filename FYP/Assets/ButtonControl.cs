@@ -14,12 +14,12 @@ public class ButtonControl : MonoBehaviour
     void Start()
     {
         identifyButton.onClick.AddListener(IdentifyButtonClick);
-        Debug.Log(identifyButton);
+        // Debug.Log(identifyButton.GetComponentInChildren<TMP_Text>());
     }
     void IdentifyButtonClick()
     {
         // Check if the button text is "Sad"
-        if (identifyButton.GetComponentInChildren<TextMeshPro>().text == "Sad")
+        if (identifyButton.GetComponentInChildren<TMP_Text>().text == "Sad")
         {
             // Display the sad panel
             sadPanel.SetActive(true);
