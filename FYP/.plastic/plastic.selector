@@ -1,4 +1,0 @@
-repository "FYP@barsoz@cloud"
-  path "/"
-    br "/main"
-    co "/main"
