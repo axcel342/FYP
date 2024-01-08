@@ -41,7 +41,7 @@ namespace MoodMe
         //private string[] EmotionsLabel = { "Angry", "Disgusted", "Scared", "Happy", "Sad", "Surprised", "Neutral" };             
         private string[] EmotionsLabel = { "Neutral", "Surprised", "Sad" };
         private string[] EmotionsLabelFER = {"neutral" ,"happiness" ,"surprise" ,"sadness" ,"anger" ,"disgust" ,"fear" };
-
+        private string[] EmotionsLabelFERPlus = {"neutral" ,"happiness" ,"surprise" ,"sadness" ,"anger" ,"disgust" ,"fear", "contempt" };
 
 
         private Tensor tensor;
