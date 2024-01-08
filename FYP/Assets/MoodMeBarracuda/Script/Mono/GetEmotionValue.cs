@@ -38,7 +38,7 @@ namespace MoodMe
                     break;
                 case EmotionEnum.Neutral:
                     thisSlider.value = EmotionsManager.Emotions.neutral;
-                    Debug.Log(EmotionsManager.Emotions.neutral);
+                    // Debug.Log(EmotionsManager.Emotions.neutral);
                     break;
                 case EmotionEnum.Sad:
                     thisSlider.value = EmotionsManager.Emotions.sad;
