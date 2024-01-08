@@ -4602,6 +4602,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3394330362466640328, guid: 1003c61218737464693563b8cc640e59, type: 3}
+      propertyPath: EmotionsNNetwork
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: a5897917145d2f844bc273970c275a95, type: 3}
+    - target: {fileID: 3394330362466640328, guid: 1003c61218737464693563b8cc640e59, type: 3}
       propertyPath: PreviewEmotionsPlane
       value: 
       objectReference: {fileID: 1398739547}
@@ -4653,6 +4657,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3394330362466640331, guid: 1003c61218737464693563b8cc640e59, type: 3}
+      propertyPath: Network
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 6e46d349df3fbba42962b2a85267a68f, type: 3}
     - target: {fileID: 3394330362466640331, guid: 1003c61218737464693563b8cc640e59, type: 3}
       propertyPath: PreviewCropPlane
       value: 
