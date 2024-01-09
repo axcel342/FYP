@@ -3331,7 +3331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SuccessPanel: {fileID: 1077653073}
-  SadMax: 0.18
+  SadMax: 0.22
 --- !u!1 &1303530120
 GameObject:
   m_ObjectHideFlags: 0
