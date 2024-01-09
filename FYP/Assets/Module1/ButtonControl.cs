@@ -46,6 +46,10 @@ public class ButtonControl : MonoBehaviour
     public Button SurprisedButton;
     // private Button btn;
     public TMP_Text scoreText;
+
+    public TMP_Text incorrectText;
+
+    public float incorrectMessageDuration = 1f;
     public float imageDisplayTime = 1f; // Time each image is displayed
     // private int currentIndex = 0; // Index of the current image
     private int score = 0; // Player's score
@@ -194,11 +198,31 @@ public class ButtonControl : MonoBehaviour
         else
         {
             // Incorrect identification logic (if needed)
+            ShowIncorrectMessage();
             Debug.Log("Incorrect identification!");
             PreviousImage = CurrentImage;
             CurrentImage = ImagesArray[imageIndex];
             SetNextImage();
         }
+    }
+
+    void ShowIncorrectMessage()
+    {
+        // Display the incorrect message for a specific duration
+        StartCoroutine(FlashIncorrectMessage());
+    }
+
+    IEnumerator FlashIncorrectMessage()
+    {
+        // Show the incorrect message
+        incorrectText.gameObject.SetActive(true);
+        Debug.Log("Called");
+
+        // Wait for the specified duration
+        yield return new WaitForSeconds(incorrectMessageDuration);
+
+        // Hide the incorrect message
+        incorrectText.gameObject.SetActive(false);
     }
 
 }
