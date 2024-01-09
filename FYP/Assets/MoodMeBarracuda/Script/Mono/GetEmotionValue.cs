@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using MoodMe;
+using System.Diagnostics.SymbolStore;
 namespace MoodMe
 {
     [RequireComponent(typeof(Slider))]
@@ -12,6 +13,8 @@ namespace MoodMe
         {
             Angry, Disgust, Happy, Neutral, Sad, Scared, Surprised, EmotionIndex
         }
+
+        private float max = 0;
 
         public EmotionEnum Emotion;
         // Start is called before the first frame update
@@ -42,6 +45,11 @@ namespace MoodMe
                     break;
                 case EmotionEnum.Sad:
                     thisSlider.value = EmotionsManager.Emotions.sad;
+                    if (EmotionsManager.Emotions.sad > max){
+                        max = EmotionsManager.Emotions.sad;
+                    }
+                    Debug.Log("Sad: "+EmotionsManager.Emotions.sad);
+                    Debug.Log("Max: " + max);
                     break;
                 case EmotionEnum.Scared:
                     thisSlider.value = EmotionsManager.Emotions.scared;
