@@ -37,8 +37,15 @@ public class ButtonControl : MonoBehaviour
     public GameObject Sad;
     public GameObject Angry;
     public GameObject Surprised;
-    public Button identifyButton;
-    public Text scoreText;
+    public Button SadButton;
+
+    public Button HappyButton;
+
+    public Button AngryButton;
+
+    public Button SurprisedButton;
+    // private Button btn;
+    public TMP_Text scoreText;
     public float imageDisplayTime = 1f; // Time each image is displayed
     // private int currentIndex = 0; // Index of the current image
     private int score = 0; // Player's score
@@ -66,10 +73,24 @@ public class ButtonControl : MonoBehaviour
         SetNextImage();
 
         // Add a listener to the button to handle button click
-        identifyButton.onClick.AddListener(IdentifyButtonClick);
+        // btn = this.GetComponent<Button>(identifyButton);
+		SadButton.onClick.AddListener(() => {IdentifyButtonClick(SadButton);});
+        HappyButton.onClick.AddListener(() => {IdentifyButtonClick(HappyButton);});
+        AngryButton.onClick.AddListener(() => {IdentifyButtonClick(AngryButton);});
+        SurprisedButton.onClick.AddListener(() => {IdentifyButtonClick(SurprisedButton);});
+        // identifyButton.onClick.AddListener(IdentifyButtonClick);
 
         // Start the coroutine to cycle through images
         StartCoroutine(DisplayImages());
+    }
+
+    void Update(){
+        // btn = this.GetComponent<Button>();
+		// SadButton.onClick.AddListener(() => {IdentifyButtonClick(SadButton);});
+        // HappyButton.onClick.AddListener(() => {IdentifyButtonClick(HappyButton);});
+        // AngryButton.onClick.AddListener(() => {IdentifyButtonClick(AngryButton);});
+        // SurprisedButton.onClick.AddListener(() => {IdentifyButtonClick(SurprisedButton);});
+        scoreText.SetText("Score: " + score);
     }
 
     void SetNextImage()
@@ -100,7 +121,7 @@ public class ButtonControl : MonoBehaviour
         }
     }
 
-    void IdentifyButtonClick()
+    void IdentifyButtonClick(Button btn)
     {
         imageIndex++;
 
@@ -110,7 +131,7 @@ public class ButtonControl : MonoBehaviour
         }
 
         // Check if the current image is correctly identified
-        if (identifyButton.GetComponentInChildren<TMP_Text>().text == "Sad" && CurrentImage.CompareTag("Sad"))
+        if (btn.GetComponentInChildren<TMP_Text>().text == "Sad" && CurrentImage.CompareTag("Sad"))
         {
             // Increment the score by 10 for each correct identification
             score += 10;
@@ -125,7 +146,7 @@ public class ButtonControl : MonoBehaviour
             SetNextImage();
         }
 
-        else if (identifyButton.GetComponentInChildren<TMP_Text>().text == "Happy" && CurrentImage.CompareTag("Happy"))
+        else if (btn.GetComponentInChildren<TMP_Text>().text == "Happy" && CurrentImage.CompareTag("Happy"))
         {
             // Increment the score by 10 for each correct identification
             score += 10;
@@ -140,7 +161,7 @@ public class ButtonControl : MonoBehaviour
             SetNextImage();
         }
 
-        else if (identifyButton.GetComponentInChildren<TMP_Text>().text == "Angry" && CurrentImage.CompareTag("Angry"))
+        else if (btn.GetComponentInChildren<TMP_Text>().text == "Angry" && CurrentImage.CompareTag("Angry"))
         {
             // Increment the score by 10 for each correct identification
             score += 10;
@@ -155,7 +176,7 @@ public class ButtonControl : MonoBehaviour
             SetNextImage();
         }
 
-        else if (identifyButton.GetComponentInChildren<TMP_Text>().text == "Surprised" && CurrentImage.CompareTag("Surprised"))
+        else if (btn.GetComponentInChildren<TMP_Text>().text == "Surprised" && CurrentImage.CompareTag("Surprised"))
         {
             // Increment the score by 10 for each correct identification
             score += 10;
