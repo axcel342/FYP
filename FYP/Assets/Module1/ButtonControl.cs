@@ -6,37 +6,18 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ButtonControl : MonoBehaviour
 {
-    // // Start is called before the first frame update
-    // public Image image;
-    // public Button identifyButton;
-    // public GameObject sadPanel;
-
-    // void Start()
-    // {
-    //     identifyButton.onClick.AddListener(IdentifyButtonClick);
-    //     // Debug.Log(identifyButton.GetComponentInChildren<TMP_Text>());
-    // }
-    // void IdentifyButtonClick()
-    // {
-    //     // Check if the button text is "Sad"
-    //     if (identifyButton.GetComponentInChildren<TMP_Text>().text == "Sad")
-    //     {
-    //         // Display the sad panel
-    //         sadPanel.SetActive(true);
-    //     }
-    //     else
-    //     {
-    //         // Add your logic here for identifying the image (if needed)
-    //         Debug.Log("Image identified!");
-    //     }
-    // }
-
-    // public Sprite[] images; // Array to hold your image sprites
-
+    public GameObject LevelComplete;
     public GameObject Happy;
     public GameObject Sad;
     public GameObject Angry;
     public GameObject Surprised;
+    public GameObject Scared;
+
+    public GameObject Happy1;
+    public GameObject Sad1;
+    public GameObject Angry1;
+    public GameObject Surprised1;
+    public GameObject Scared1;
     public Button SadButton;
 
     public Button HappyButton;
@@ -44,6 +25,8 @@ public class ButtonControl : MonoBehaviour
     public Button AngryButton;
 
     public Button SurprisedButton;
+
+    public Button ScaredButton;
     // private Button btn;
     public TMP_Text scoreText;
 
@@ -63,13 +46,19 @@ public class ButtonControl : MonoBehaviour
     void Start()
     {
         // ImagesArray = [Sad, Happy, Angry, Surprised];
-        ImagesArray = new GameObject[4];
+        ImagesArray = new GameObject[10];
         imageIndex = 0;
 
         ImagesArray[0] = Sad;
         ImagesArray[1] = Happy;
         ImagesArray[2] = Angry;
         ImagesArray[3] = Surprised;
+        ImagesArray[4] = Scared;
+        ImagesArray[5] = Sad1;
+        ImagesArray[6] = Happy1;
+        ImagesArray[7] = Angry1;
+        ImagesArray[8] = Surprised1;
+        ImagesArray[9] = Scared1;
 
         PreviousImage = Sad;
         CurrentImage = Sad;
@@ -82,6 +71,7 @@ public class ButtonControl : MonoBehaviour
         HappyButton.onClick.AddListener(() => {IdentifyButtonClick(HappyButton);});
         AngryButton.onClick.AddListener(() => {IdentifyButtonClick(AngryButton);});
         SurprisedButton.onClick.AddListener(() => {IdentifyButtonClick(SurprisedButton);});
+        ScaredButton.onClick.AddListener(() => {IdentifyButtonClick(ScaredButton);});
         // identifyButton.onClick.AddListener(IdentifyButtonClick);
 
         // Start the coroutine to cycle through images
@@ -129,8 +119,10 @@ public class ButtonControl : MonoBehaviour
     {
         imageIndex++;
 
-        if (imageIndex == 4){
+        if (imageIndex == 10){
             imageIndex = 0;
+            scoreText.enabled = false;
+            LevelComplete.SetActive(true);
 
         }
 
@@ -194,6 +186,21 @@ public class ButtonControl : MonoBehaviour
             CurrentImage = ImagesArray[imageIndex];
             SetNextImage();
         }
+
+        else if (btn.GetComponentInChildren<TMP_Text>().text == "Scared" && CurrentImage.CompareTag("Scared"))
+        {
+            // Increment the score by 10 for each correct identification
+            score += 10;
+            // Update the score text
+            // scoreText.text = "Score: " + score;
+
+            // Move to the next image
+            // currentIndex = (currentIndex + 1) % images.Length;
+
+            PreviousImage = CurrentImage;
+            CurrentImage = ImagesArray[imageIndex];
+            SetNextImage();
+        }        
 
         else
         {
