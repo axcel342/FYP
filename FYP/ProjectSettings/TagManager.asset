@@ -8,6 +8,7 @@ TagManager:
   - Sad
   - Angry
   - Surprised
+  - Scared
   layers:
   - Default
   - TransparentFX
