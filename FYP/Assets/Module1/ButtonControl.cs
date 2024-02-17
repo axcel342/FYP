@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ButtonControl : MonoBehaviour
 {
+    [SerializeField]
     public GameObject LevelComplete;
     public GameObject Happy;
     public GameObject Sad;
@@ -100,7 +101,6 @@ public class ButtonControl : MonoBehaviour
         Debug.Log(score);
 
     }
-
     IEnumerator DisplayImages()
     {
         while (true)
@@ -123,6 +123,7 @@ public class ButtonControl : MonoBehaviour
             imageIndex = 0;
             scoreText.enabled = false;
             LevelComplete.SetActive(true);
+            LevelComplete.GetComponentInChildren<Button>().onClick.AddListener(() => {GameManager.Instance.LoadScene("EmotionMatchingModulePrototype");});
 
         }
 

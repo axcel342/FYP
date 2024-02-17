@@ -36,35 +36,50 @@ public class ButtonMatching : MonoBehaviour
         {3, "Surprised"}
     };
 
+    void Start(){
 
-    void Start()
-    {
-        // ImagesArray = [Sad, Happy, Angry, Surprised];
-        emotionPictures = new GameObject[4];
-
-        emotionPictures[0] = Sad;
-        emotionPictures[1] = Happy;
-        emotionPictures[2] = Angry;
-        emotionPictures[3] = Surprised;
-
-        emotionButtons[0] = SadButton;
-        emotionButtons[1] = HappyButton;
-        emotionButtons[2] = AngryButton;
-        emotionButtons[3] = SurprisedButton;
-
-        // Assign click events to buttons
-        for (int i = 0; i < 4; i++)
-        {
-            int index = i; // Capture the current value of i for the callback
-            emotionButtons[i].onClick.AddListener(() => OnButtonClick(index));
-        }
-
-        // Shuffle the order of emotion buttons and pictures
-        // ShuffleArrays(emotionPictures, emotionButtons);
-
-        // Update the UI
-        UpdateUI();
+        DoSomethingLater();
     }
+
+    public void DoSomethingLater()
+    {
+        Invoke("DoSomething", 2f);
+    }
+
+    void DoSomething()
+    {
+        GameManager.Instance.LoadScene("EmotionExpressionModulePrototype");
+    }
+
+
+    // void Start()
+    // {
+    //     // ImagesArray = [Sad, Happy, Angry, Surprised];
+    //     emotionPictures = new GameObject[4];
+
+    //     emotionPictures[0] = Sad;
+    //     emotionPictures[1] = Happy;
+    //     emotionPictures[2] = Angry;
+    //     emotionPictures[3] = Surprised;
+
+    //     emotionButtons[0] = SadButton;
+    //     emotionButtons[1] = HappyButton;
+    //     emotionButtons[2] = AngryButton;
+    //     emotionButtons[3] = SurprisedButton;
+
+    //     // Assign click events to buttons
+    //     for (int i = 0; i < 4; i++)
+    //     {
+    //         int index = i; // Capture the current value of i for the callback
+    //         emotionButtons[i].onClick.AddListener(() => OnButtonClick(index));
+    //     }
+
+    //     // Shuffle the order of emotion buttons and pictures
+    //     // ShuffleArrays(emotionPictures, emotionButtons);
+
+    //     // Update the UI
+    //     UpdateUI();
+    // }
 
     void Update()
     {
