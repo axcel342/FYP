@@ -24,7 +24,7 @@ public void onClick(){
 public void HandleNextModuleButton()
 {
     // Access Game Manager instance
-    GameManager.Instance.LoadScene("EmotionMatchingModulePrototype");
+    GameManager.Instance.LoadScene("EmotionMatching");
 
     // Optional visual feedback
     // GetComponent<Image>().color = Color.red; // Change button color
