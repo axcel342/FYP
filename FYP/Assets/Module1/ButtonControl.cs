@@ -123,7 +123,7 @@ public class ButtonControl : MonoBehaviour
             imageIndex = 0;
             scoreText.enabled = false;
             LevelComplete.SetActive(true);
-            LevelComplete.GetComponentInChildren<Button>().onClick.AddListener(() => {GameManager.Instance.LoadScene("EmotionMatchingModulePrototype");});
+            LevelComplete.GetComponentInChildren<Button>().onClick.AddListener(() => {GameManager.Instance.LoadScene("EmotionMatching");});
 
         }
 

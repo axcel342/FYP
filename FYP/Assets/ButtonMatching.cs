@@ -7,26 +7,26 @@ using UnityEngine.UI;
 
 public class ButtonMatching : MonoBehaviour
 {
-    public GameObject[] emotionPictures;  // Array of Image components representing the emotion pictures
-    public Button[] emotionButtons;  // Array of Button components representing the buttons for emotions
-    public Text timerText;           // Text component for displaying the timer
-    public GameObject gameOverScreen;
-    public GameObject youWonScreen;
+    // public GameObject[] emotionPictures;  // Array of Image components representing the emotion pictures
+    // public Button[] emotionButtons;  // Array of Button components representing the buttons for emotions
+    // public Text timerText;           // Text component for displaying the timer
+    // public GameObject gameOverScreen;
+    // public GameObject youWonScreen;
 
-    private int correctMatches = 0;
-    private bool gameActive = true;
-    private float timer = 20f;
-    public GameObject Happy;
-    public GameObject Sad;
-    public GameObject Angry;
-    public GameObject Surprised;
-    public Button SadButton;
+    // private int correctMatches = 0;
+    // private bool gameActive = true;
+    // private float timer = 20f;
+    // public GameObject Happy;
+    // public GameObject Sad;
+    // public GameObject Angry;
+    // public GameObject Surprised;
+    // public Button SadButton;
 
-    public Button HappyButton;
+    // public Button HappyButton;
 
-    public Button AngryButton;
+    // public Button AngryButton;
 
-    public Button SurprisedButton;
+    // public Button SurprisedButton;
 
     Dictionary<int, string> emotionDict = new Dictionary<int, string>()
     {
@@ -49,6 +49,7 @@ public class ButtonMatching : MonoBehaviour
     void DoSomething()
     {
         GameManager.Instance.LoadScene("EmotionExpressionModulePrototype");
+        // GameManager.Instance.LoadScene("EmotionMatching");
     }
 
 
@@ -81,99 +82,99 @@ public class ButtonMatching : MonoBehaviour
     //     UpdateUI();
     // }
 
-    void Update()
-    {
-        if (gameActive)
-        {
-            // Update the timer
-            timer -= Time.deltaTime;
-            // timerText.text = $"Time: {Mathf.Round(timer)}";
+    // void Update()
+    // {
+    //     if (gameActive)
+    //     {
+    //         // Update the timer
+    //         timer -= Time.deltaTime;
+    //         // timerText.text = $"Time: {Mathf.Round(timer)}";
 
-            // Check for game over condition
-            if (timer <= 0f)
-            {
-                gameActive = false;
-                ShowGameOverScreen();
-            }
-        }
-    }
+    //         // Check for game over condition
+    //         if (timer <= 0f)
+    //         {
+    //             gameActive = false;
+    //             ShowGameOverScreen();
+    //         }
+    //     }
+    // }
 
-    void OnButtonClick(int buttonIndex)
-    {
-        if (gameActive)
-        {
-            // Check if the clicked button matches the correct emotion index
-            if (buttonIndex == GetCorrectEmotionIndex())
-            {
-                correctMatches++;
+    // void OnButtonClick(int buttonIndex)
+    // {
+    //     if (gameActive)
+    //     {
+    //         // Check if the clicked button matches the correct emotion index
+    //         if (buttonIndex == GetCorrectEmotionIndex())
+    //         {
+    //             correctMatches++;
 
-                // Check for a win
-                if (correctMatches == emotionButtons.Length)
-                {
-                    gameActive = false;
-                    ShowYouWonScreen();
-                }
-                else
-                {
-                    // Update the UI for the next round
-                    UpdateUI();
-                }
-            }
-        }
-    }
+    //             // Check for a win
+    //             if (correctMatches == emotionButtons.Length)
+    //             {
+    //                 gameActive = false;
+    //                 ShowYouWonScreen();
+    //             }
+    //             else
+    //             {
+    //                 // Update the UI for the next round
+    //                 UpdateUI();
+    //             }
+    //         }
+    //     }
+    // }
 
-    void UpdateUI()
-    {
-        // Update the UI to display the current set of emotion pictures
-        for (int i = 0; i < 4; i++)
-        {
-            emotionPictures[i].SetActive(true);
-        }
-    }
+    // void UpdateUI()
+    // {
+    //     // Update the UI to display the current set of emotion pictures
+    //     for (int i = 0; i < 4; i++)
+    //     {
+    //         emotionPictures[i].SetActive(true);
+    //     }
+    // }
 
-    Sprite GetEmotionSprite(int index)
-    {
-        // Return the Sprite for the emotion picture at the specified index
-        // This method should be implemented based on your specific setup
-        // Replace it with your logic for retrieving emotion sprites
-        // ...
+    // Sprite GetEmotionSprite(int index)
+    // {
+    //     // Return the Sprite for the emotion picture at the specified index
+    //     // This method should be implemented based on your specific setup
+    //     // Replace it with your logic for retrieving emotion sprites
+    //     // ...
 
-        // Placeholder implementation (replace with your actual logic)
-        return null;
-    }
+    //     // Placeholder implementation (replace with your actual logic)
+    //     return null;
+    // }
 
-    int GetCorrectEmotionIndex()
-    {
-        // Define the correct order of emotions (change this based on your specific setup)
-        int[] correctOrder = { 0, 1, 2, 3 };  // Adjust the indices based on your actual order
+    // int GetCorrectEmotionIndex()
+    // {
+    //     // Define the correct order of emotions (change this based on your specific setup)
+    //     int[] correctOrder = { 0, 1, 2, 3 };  // Adjust the indices based on your actual order
 
-        // Find the index of the correct emotion in the shuffled order
-        for (int i = 0; i < emotionButtons.Length; i++)
-        {
-            if (emotionButtons[i].GetComponentInChildren<Text>().text == emotionDict[correctOrder[i]])
-            {
-                return i;
-            }
-        }
+    //     // Find the index of the correct emotion in the shuffled order
+    //     for (int i = 0; i < emotionButtons.Length; i++)
+    //     {
+    //         if (emotionButtons[i].GetComponentInChildren<Text>().text == emotionDict[correctOrder[i]])
+    //         {
+    //             return i;
+    //         }
+    //     }
 
-        // Default to the first button (in case of an issue)
-        return 0;
-    }
+    //     // Default to the first button (in case of an issue)
+    //     return 0;
+    // }
 
-    void ShowGameOverScreen()
-    {
-        // Display the game over screen
-        // gameOverScreen.SetActive(true);
-        Debug.Log("Game Over");
+    // void ShowGameOverScreen()
+    // {
+    //     // Display the game over screen
+    //     // gameOverScreen.SetActive(true);
+    //     Debug.Log("Game Over");
 
-    }
+    // }
 
-    void ShowYouWonScreen()
-    {
-        // Display the you won screen
-        // youWonScreen.SetActive(true);
-        Debug.Log("You Won");
+    // void ShowYouWonScreen()
+    // {
+    //     // Display the you won screen
+    //     // youWonScreen.SetActive(true);
+    //     Debug.Log("You Won");
 
-    }
+    // }
 
 }
