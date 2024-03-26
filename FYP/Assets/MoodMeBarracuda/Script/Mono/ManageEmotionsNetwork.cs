@@ -37,7 +37,7 @@ namespace MoodMe
 
         private IWorker engine;
 
-        private string[] EmotionsLabelFull = { "Angry", "Disgusted", "Scared", "Happy", "Neutral" "Sad", "Surprised",  };
+        private string[] EmotionsLabelFull = { "Angry", "Disgusted", "Scared", "Happy", "Neutral", "Sad", "Surprised"};
         //private string[] EmotionsLabel = { "Angry", "Disgusted", "Scared", "Happy", "Sad", "Surprised", "Neutral" };             
         private string[] EmotionsLabel = { "Neutral", "Surprised", "Sad" };
         // private string[] EmotionsLabelFER = {"neutral" ,"happiness" ,"surprise" ,"sadness" ,"anger" ,"disgust" ,"fear" };

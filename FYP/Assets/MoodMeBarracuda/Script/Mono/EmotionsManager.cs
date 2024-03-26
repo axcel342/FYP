@@ -149,7 +149,7 @@ namespace MoodMe
                                 //Debug.Log("scared " + Emotions.scared);
                                 //Debug.Log("surprised " + Emotions.surprised);
                                 Angry = Emotions.angry;
-                                Disgust = Emotions.disgust;
+                                Disgusted = Emotions.disgust;
                                 Happy = Emotions.happy;
                                 Neutral = Emotions.neutral;
                                 Sad = Emotions.sad;
@@ -169,14 +169,14 @@ namespace MoodMe
             else
             {
                 Emotions.angry = Angry;
-                Emotions.disgust = Disgust;
+                Emotions.disgust = Disgusted;
                 Emotions.happy = Happy;
                 Emotions.neutral = Neutral;
                 Emotions.sad = Sad;
                 Emotions.scared = Scared;
                 Emotions.surprised = Surprised;
             }
-            EmotionIndex = (((3f * Happy + Surprised - (Sad + Scared + Disgust + Angry)) / 3f) + 1f) / 2f;
+            EmotionIndex = (((3f * Happy + Surprised - (Sad + Scared + Disgusted + Angry)) / 3f) + 1f) / 2f;
 
         }
 

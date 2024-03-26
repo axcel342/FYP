@@ -13,7 +13,7 @@ namespace MoodMe
         {
             Angry, Disgusted, Scared, Happy, Neutral, Sad, Surprised, EmotionIndex
         }
-        private float max = 0;
+        // private float max = 0;
 
         public EmotionEnum Emotion;
         // Start is called before the first frame update
@@ -32,7 +32,7 @@ namespace MoodMe
                 case EmotionEnum.Angry:
                     thisSlider.value = EmotionsManager.Emotions.angry;
                     break;
-                case EmotionEnum.Disgust:
+                case EmotionEnum.Disgusted:
                     thisSlider.value = EmotionsManager.Emotions.disgust;
                     break;
                 case EmotionEnum.Happy:
@@ -44,11 +44,11 @@ namespace MoodMe
                     break;
                 case EmotionEnum.Sad:
                     thisSlider.value = EmotionsManager.Emotions.sad;
-                    if (EmotionsManager.Emotions.sad > max){
-                        max = EmotionsManager.Emotions.sad;
-                    }
-                    Debug.Log("Sad: "+EmotionsManager.Emotions.sad);
-                    Debug.Log("Max: " + max);
+                    // if (EmotionsManager.Emotions.sad > max){
+                    //     max = EmotionsManager.Emotions.sad;
+                    // }
+                    // Debug.Log("Sad: "+EmotionsManager.Emotions.sad);
+                    // Debug.Log("Max: " + max);
                     break;
                 case EmotionEnum.Scared:
                     thisSlider.value = EmotionsManager.Emotions.scared;
