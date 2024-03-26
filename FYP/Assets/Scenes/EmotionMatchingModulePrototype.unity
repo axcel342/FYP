@@ -605,6 +605,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2010582917}
   - {fileID: 1182191454}
   - {fileID: 1887093623}
   - {fileID: 1369521062}
@@ -613,7 +614,6 @@ RectTransform:
   - {fileID: 1205347900}
   - {fileID: 1342030079}
   - {fileID: 1162849561}
-  - {fileID: 2010582917}
   - {fileID: 1999365888}
   - {fileID: 772142322}
   - {fileID: 1675641075}
@@ -637,19 +637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb46ae5a0cfcdff1f977543f32497963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotionPictures: []
-  emotionButtons: []
-  timerText: {fileID: 0}
-  gameOverScreen: {fileID: 0}
-  youWonScreen: {fileID: 0}
-  Happy: {fileID: 0}
-  Sad: {fileID: 0}
-  Angry: {fileID: 0}
-  Surprised: {fileID: 0}
-  SadButton: {fileID: 0}
-  HappyButton: {fileID: 0}
-  AngryButton: {fileID: 0}
-  SurprisedButton: {fileID: 0}
 --- !u!1 &490462646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,14 +3363,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.043137256, g: 0.43137255, b: 0.30980393, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
