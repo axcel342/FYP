@@ -37,11 +37,11 @@ namespace MoodMe
 
         private IWorker engine;
 
-        private string[] EmotionsLabelFull = { "Angry", "Disgusted", "Scared", "Happy", "Sad", "Surprised", "Neutral" };
+        private string[] EmotionsLabelFull = { "Angry", "Disgusted", "Scared", "Happy", "Neutral" "Sad", "Surprised",  };
         //private string[] EmotionsLabel = { "Angry", "Disgusted", "Scared", "Happy", "Sad", "Surprised", "Neutral" };             
         private string[] EmotionsLabel = { "Neutral", "Surprised", "Sad" };
-        private string[] EmotionsLabelFER = {"neutral" ,"happiness" ,"surprise" ,"sadness" ,"anger" ,"disgust" ,"fear" };
-        private string[] EmotionsLabelFERPlus = {"neutral" ,"happiness" ,"surprise" ,"sadness" ,"anger" ,"disgust" ,"fear", "contempt" };
+        // private string[] EmotionsLabelFER = {"neutral" ,"happiness" ,"surprise" ,"sadness" ,"anger" ,"disgust" ,"fear" };
+        // private string[] EmotionsLabelFERPlus = {"neutral" ,"happiness" ,"surprise" ,"sadness" ,"anger" ,"disgust" ,"fear", "contempt" };
 
 
         private Tensor tensor;
@@ -94,7 +94,7 @@ namespace MoodMe
 
             for (int i = 0; i < results.Length; i++)
             {
-                DetectedEmotions[EmotionsLabel[i]] = results[i];
+                DetectedEmotions[EmotionsLabelFull[i]] = results[i];
                 //Debug.Log(EmotionsLabel[i] + " = " + results[i]);
             }
             //Debug.Log("-------------------------------------------");

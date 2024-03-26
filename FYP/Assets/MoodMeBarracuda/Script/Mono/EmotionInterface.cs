@@ -47,9 +47,9 @@ namespace MoodMe
                         disgust = buff[1],
                         scared = buff[2],
                         happy = buff[3],
-                        sad = buff[4],
-                        surprised = buff[5],
-                        neutral = buff[6],
+                        neutral = buff[4],
+                        sad = buff[5],
+                        surprised = buff[6],
                         latency = 0,
                         latency_avg = 0,
                         AllZero = (buff[0] + buff[1] + buff[2] + buff[3] + buff[4] + buff[5] + buff[6]) == 0,
@@ -60,7 +60,6 @@ namespace MoodMe
                 return _detectedemotions;
             }
         }
-
         private static string GetLastTrackerError()
         {
             string s = "X";

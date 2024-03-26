@@ -37,7 +37,9 @@ namespace MoodMe
         [Range(0, 1f)]
         public float Angry;
         [Range(0, 1f)]
-        public float Disgust;
+        public float Disgusted;
+        [Range(0, 1f)]
+        public float Scared;
         [Range(0, 1f)]
         public float Happy;
         [Range(0, 1f)]
@@ -45,11 +47,8 @@ namespace MoodMe
         [Range(0, 1f)]
         public float Sad;
         [Range(0, 1f)]
-        public float Scared;
-        [Range(0, 1f)]
         public float Surprised;
         [Range(0, 1f)]
-
         public static float EmotionIndex;
 
         public static MoodMeEmotions.MDMEmotions Emotions;

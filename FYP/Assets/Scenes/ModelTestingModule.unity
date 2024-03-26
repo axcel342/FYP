@@ -4604,7 +4604,7 @@ PrefabInstance:
     - target: {fileID: 3394330362466640328, guid: 1003c61218737464693563b8cc640e59, type: 3}
       propertyPath: EmotionsNNetwork
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 336b238100d1d7241a721b5fbba14bac, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 93b528c10fd7e634f9fae02781af9e9a, type: 3}
     - target: {fileID: 3394330362466640328, guid: 1003c61218737464693563b8cc640e59, type: 3}
       propertyPath: PreviewEmotionsPlane
       value: 
