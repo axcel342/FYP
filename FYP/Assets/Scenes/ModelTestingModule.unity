@@ -745,7 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fcc9a52b73d944b992becdae818bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emotion: 4
+  Emotion: 5
 --- !u!114 &342373976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Disappointed
+  m_Text: Disgusted
 --- !u!222 &487934143
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2122,7 +2122,7 @@ GameObject:
   - component: {fileID: 955375623}
   - component: {fileID: 955375622}
   m_Layer: 5
-  m_Name: Disappointed
+  m_Name: Disgusted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2304,7 +2304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fcc9a52b73d944b992becdae818bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emotion: 5
+  Emotion: 2
 --- !u!114 &1136886765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2887,7 +2887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fcc9a52b73d944b992becdae818bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emotion: 2
+  Emotion: 3
 --- !u!114 &1195663357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3028,7 +3028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fcc9a52b73d944b992becdae818bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emotion: 3
+  Emotion: 4
 --- !u!114 &1299483092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4604,7 +4604,7 @@ PrefabInstance:
     - target: {fileID: 3394330362466640328, guid: 1003c61218737464693563b8cc640e59, type: 3}
       propertyPath: EmotionsNNetwork
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 336b238100d1d7241a721b5fbba14bac, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 93b528c10fd7e634f9fae02781af9e9a, type: 3}
     - target: {fileID: 3394330362466640328, guid: 1003c61218737464693563b8cc640e59, type: 3}
       propertyPath: PreviewEmotionsPlane
       value: 
