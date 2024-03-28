@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 public class SelectLevel : MonoBehaviour
 {
   public void PlayFirstModule() {
-    SceneManager.LoadScene(2);
-  }
-
-  public void PlaySecondModule() {
     SceneManager.LoadScene(3);
   }
 
-  public void PlayThirdModule() {
+  public void PlaySecondModule() {
     SceneManager.LoadScene(4);
+  }
+
+  public void PlayThirdModule() {
+    SceneManager.LoadScene(5);
   }
 
   public void GoBack() {
