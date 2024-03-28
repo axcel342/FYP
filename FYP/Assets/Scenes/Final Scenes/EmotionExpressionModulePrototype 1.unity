@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fcc9a52b73d944b992becdae818bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emotion: 5
+  Emotion: 2
 --- !u!114 &13834248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fcc9a52b73d944b992becdae818bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emotion: 3
+  Emotion: 4
 --- !u!114 &372170213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4705,7 +4705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fcc9a52b73d944b992becdae818bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emotion: 2
+  Emotion: 3
 --- !u!114 &1477874698
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3893,8 +3893,8 @@ GameObject:
   - component: {fileID: 1275083784}
   - component: {fileID: 1275083783}
   - component: {fileID: 1275083782}
-  - component: {fileID: 1275083785}
   - component: {fileID: 1275083781}
+  - component: {fileID: 1275083785}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4008,11 +4008,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1275083780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bee451f410a0c14ca9f346ac66fcad2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cc452ae1a9f0ad428c4224fd0e9a653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SuccessPanel: {fileID: 1077653073}
-  SadMax: 0.22
+  SadMax: 0.2
 --- !u!1 &1303530120
 GameObject:
   m_ObjectHideFlags: 0
